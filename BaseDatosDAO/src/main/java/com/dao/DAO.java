@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.usuario.Usuario;
+import com.dominio.Usuario;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.usuario.Usuario;
+import com.dominio.Usuario;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -16,9 +16,10 @@ public class DAOpostgres implements DAO {
             String url="jdbc:postgresql://192.168.56.2/empresa";
             String user="postgres";
             String clave="abc";
+            Class.forName("org.postgresql.Driver");
             cn = DriverManager.getConnection( url,user,clave);
             System.out.println("Conexión establecida.");
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Error: " + e.toString());
         }
     }

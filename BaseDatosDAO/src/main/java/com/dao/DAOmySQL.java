@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.usuario.Usuario;
+import com.dominio.Usuario;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,9 +17,10 @@ public class DAOmySQL implements DAO{
             String url = "jdbc:mysql://localhost:3306/empresa?serverTimezone=" + TimeZone.getDefault().getID();
             String user="root";
             String clave="admin";
+            Class.forName("com.mysql.cj.jdbc.Driver");
             cn = DriverManager.getConnection( url,user,clave);
             System.out.println("Conexión establecida.");
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Error: " + e.toString());
         }
     }

@@ -6,5 +6,5 @@ public class Constantes {
         POSTGRES, MYSQL
     }
 
-    public static final DATABASES CURRENT_DB= DATABASES.MYSQL;
+    public static final String PROPERTIES_PATH = "/properties.properties";
 }
